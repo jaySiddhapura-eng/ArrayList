@@ -972,7 +972,7 @@
                }
        
        ~~~
-[Collection Interface Overview Diagram](https://github.com/jaySiddhapura-eng/List/blob/master/Capture.PNG)
+[Diagram for CopyOnWriteArrayList](https://github.com/jaySiddhapura-eng/List/blob/master/Capture.PNG)
 
 
 ## Stack
