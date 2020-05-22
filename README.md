@@ -556,15 +556,211 @@
 
                  
 
-    15. line 15
+    15. 
 
-    16. line 16
+## LinkedList
 
-    ​	
+1. ArrayList and LinkedList both implements the List interface
 
+2. Both maintains the **insertion order**
 
+3. Both are **non synchronized** classes
 
+4. What is **Node** in LinkedList?
 
+   1. LinkedList is a linear data structure where each element is a separate object
+   2. This element object of the List called as Node
+   3. Each node holds reference to the neighboring node along with the data
+   4. If node holds reference of next node only then list known as **Singly Linked List**
+   5. If node holds reference of both next and previous node then list known as **Doubly Linked List**
+
+5. Differences between LinkedList and ArrayList
+
+   | ArrayList                                                    | LinkedList                                                   |
+   | :----------------------------------------------------------- | :----------------------------------------------------------- |
+   | Internally uses **Dynamic Array**                            | Internally uses **Doubly Linked list**                       |
+   | **Slow at element manipulation** due to shifting of elements during operations | **Faster element manipulation**, due to absence of element shifting during operations |
+   | Can only acts as a **List**                                  | Can act as a **List and Queue**                              |
+   | Better for **storing and accessing** data                    | better for **data manipulation**                             |
+
+6. **Declaring** LinkedList
+
+   ~~~java
+   LinkedList<String> LL = new LinkedList<>();
+   // user can perform all the operations which are possible with ArrayList
+   // because both the class implements the List interface
+   ~~~
+
+7. **Add Nodes** in created LinkedList
+
+   ~~~java
+   LL.add("A");	// method from List interface
+   LL.add("B");		
+   LL.add("C");
+   LL.add("D");
+   ~~~
+
+   Output:
+
+   ~~~java
+   [A, B, C, D]
+   ~~~
+
+8. Add node at **particular Index** 
+
+   ~~~java
+   LL.add(3,"e");  // method from List Interface
+   ~~~
+
+   Output:
+
+   ~~~java
+   [A, B, C, e, D]
+   ~~~
+
+9. Add **First and Last Node** in the LinkedList
+
+   ~~~java
+   LL.addFirst("F");		// methods from Deque Interface
+   LL.addLast("L");
+   ~~~
+
+   Output:
+
+   ~~~java
+   [F, A, B, C, e, D, L]
+   ~~~
+
+10. **Get First and Last Node** in the LinkedList
+
+    ~~~java
+    Object first = LL.getFirst();	// methods from Deque Interface
+    String last = LL.getLast();
+    System.out.println("first node: " + first);
+    System.out.println("last node: " + last);
+    ~~~
+
+    Output:
+
+    ~~~java
+    first node: F
+    last node: L
+    ~~~
+
+11. **Remove** the Node
+
+    ~~~java
+    LL.remove("C");		// method from List interface
+    LL.remove(2);
+    System.out.println("Remove operation: "+LL);
+    ~~~
+
+    Output:
+
+    ~~~java
+    Original List: [F, A, B, C, e, D, L]
+    Remove operation: [F, A, e, D, L]
+    ~~~
+
+12. **Remove first and last** node
+
+    ~~~java
+     LL.removeFirst();		// method from Deque Interface
+     LL.removeLast();
+     System.out.println("First and Last remove: "+LL);
+    ~~~
+
+    Output:
+
+    ~~~java
+    Original List: [F, A, B, C, e, D, L]
+    First and Last remove: [A, B, C, e, D]
+    ~~~
+
+13. Check whether List **contains** particular node 
+
+    ~~~java
+    boolean status = LL.contains("C");		// method from List Interface
+    System.out.println("list contains C: " + status );
+    ~~~
+
+    Output:
+
+    ~~~java
+    Original List: [F, A, B, C, e, D, L]
+    list contains C: true
+    ~~~
+
+14. Check the **Size** of List
+
+    ~~~java
+    int size = LL.size();		// method from List Interface
+    System.out.println("size of List: " + size);
+    ~~~
+
+    Output:
+
+    ~~~java
+    Original List: [F, A, B, C, e, D, L]
+    size of List: 7
+    ~~~
+
+15. Check whether List is empty
+
+    ~~~java
+    boolean EMP = LL.isEmpty();		// method from List Interface
+    System.out.println("Is List empty: "+ EMP);
+    ~~~
+
+    Output:
+
+    ~~~java
+    Is List empty: false
+    ~~~
+
+16. **Overwrite** the node in List and **Obtain** the Node of corresponding index
+
+    ~~~java
+    // it can overwrite the First and last node also
+    LL.set(0,"X");		// method from List Interface
+    System.out.println("modified list: " +LL);
+    
+    System.out.println("The node at index 2: "+LL.get(2));
+    ~~~
+
+    Output:
+
+    ~~~java
+    Original List: [F, A, B, C, e, D, L]
+    modified list: [X, A, B, C, e, D, L]
+    The node at index 2: B
+    ~~~
+
+17. **Clear** the LinkedList
+
+    ~~~java
+    LL.clear();		// method from List Interface
+    System.out.println(LL);
+    ~~~
+
+    Output:
+
+    ~~~java
+    Original List: [F, A, B, C, e, D, L]
+    []
+    ~~~
+
+18. **Retention** of one list on the other list [Retention: the action of absorbing]
+
+    ~~~java
+    
+    ~~~
+
+    
+
+19. line 19
+
+20. line 20
 
 
 

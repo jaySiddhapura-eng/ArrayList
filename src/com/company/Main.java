@@ -13,6 +13,13 @@ public class Main {
         //v1.addingTwoArrayLists();
         //v1.searchExample();
         //v1.iterationOverArrayList();
-        v1.reverseIterator();
+
+     LnkLst sampleLink = new LnkLst();
+     //sampleLink.sampleLinedList();
+
+        //sampleLink.retentionExample();
+        //sampleLink.subListDemo();
+        //sampleLink.offerDemo();
+        sampleLink.peekFirstPollFirst();
     }
 }
