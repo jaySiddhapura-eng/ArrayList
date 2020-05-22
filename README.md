@@ -1,4 +1,4 @@
-# List [ArrayList]
+# List  Interface
 
 ------
 
@@ -890,13 +890,239 @@
     list after Poll: [B, C]
     ~~~
 
+## Vector [Synchronization in ArrayList ]
+
+1. Vector same as ArrayList implements the List Interface
+
+2. Both Vector and ArrayList uses **Dynamically Resizable Array**
+
+3. Vector is **Synchronized**, but **ArrayList is not**
+
+4. Only one thread at a time can access the Vector
+
+5. Where as on ArrayList multiple thread can operate at the same time
+
+6. **Vector is thread safe**, ArrayList is **not thread safe by default**
+
+7. Vectors are considered to be obsolete and unofficially deprecated in java
+
+8. **Thread safety** can be achieved **with ArrayList** by following method
+
+   1. Collections.synchronizedList() method
+   2. Using CopyOnWriteArrayList.
+
+9. Synchronized List method
+
+   ~~~java
+   List<String> namesList = Collections.synchronizedList(new ArrayList<String>());
+   //List methods are synchronized
+   	namesList.add("A");
+     	namesList.add("B");
+      	namesList.add("C");
+     	namesList.add("D");
+      	namesList.add("E");
+   
+   //Use explicit synchronization while iterating
+   // only one thread will execute following block at a time
+   // following block of code acts as a monitor block of the code
+   synchronized (namesList) {
+        Iterator<String> iterator = namesList.iterator();
+        while (iterator.hasNext()) {
+              System.out.println(iterator.next());
+             }
+           }
+   ~~~
+
+10. CopyOnWriteArrayList
+
+    1. Thread-safe variant of ArrayList in which all mutative operations(add, set etc) are implemented by making fresh copy of the underlying array.
+
+    2. we can iterate over the list in a safe way, even when concurrent modification is happening
+
+    3. When Iterator is created a copy of list is given to that iterator
+
+    4. Therefore whatever operations are performed on the list after creation of iterator are not affected on iterator
+
+       Sample1:
+
+       ~~~java
+       CopyOnWriteArrayList<Integer> numbers = new CopyOnWriteArrayList<>();
+           numbers.add(1);
+           numbers.add(2);
+           numbers.add(3);
+           numbers.add(4);
+       
+       //iterator created // copy of list is provided to the iterator
+       Iterator<Integer> ITR = numbers.iterator();
+       // This iterator has a copy of numbers list [snapshot]
+       
+       // following element is not present in the snapshot which ITR has
+       // following update will happen on the original copy of the list
+       numbers.add(5);
+       
+       // following iteration will happen on the snapshot which ITR has
+       // therefore element 5 is excluded
+       while(ITR.hasNext()){	
+             System.out.println(ITR.next());
+            }
+       ~~~
+
+       Output:
+
+       ~~~java
+       1
+       2
+       3
+       4
+       ~~~
+
+       Sample2: performing iteration on the updated list
+
+       ~~~java
+       // to perform this another iterator is being declared
+       // after the update
+       
+       CopyOnWriteArrayList<Integer> numbers = new CopyOnWriteArrayList<>();
+           numbers.add(1);
+           numbers.add(2);
+           numbers.add(3);
+           numbers.add(4);
+       
+               //iterator created // list snapshot1 is given to ITR
+       	   // snapshot1 has 4 elements therefore ITR have 4 elements
+               Iterator<Integer> ITR = numbers.iterator();
+       
+               // following elements are added in the list 'numbers'
+       		// not in snapshot1
+       	    numbers.add(10); 	
+               numbers.add(20);
+               numbers.add(30);
+               numbers.add(40);
+       
+               // iterator 2 created // list snapshot2 is given to ITR2
+       	   // snapshot 2 has old as well as recently updated elements
+               Iterator<Integer> ITR2 = numbers.iterator();
+       
+               while (ITR.hasNext()){
+                   // iteration will happen on snapshot1
+                   // not on the list 'numbers'
+                   System.out.println("ITR values: " + ITR.next());
+               }
+       
+               while (ITR2.hasNext()){
+                   // iteration will happen in snapshot2
+                   // not on the list 'numbers'
+                   System.out.println("ITR2 values: " + ITR2.next());
+               }
+       
+       // image : capture
+       ~~~
+
+11. line 11
+
+## Stack
+
+1. Stack extends vector class
+
+2. It is LIFO list
+
+3. **Creating** new Stack
+
+   ~~~java
+   Stack<Integer> S = new Stack<>();
+   ~~~
+
+4. Checking whether stack is empty or not
+
+   ~~~java
+   boolean stackStatus = S.isEmpty();
+   System.out.println("stack empty: " + stackStatus);
+   ~~~
+
+   Output:
+
+   ~~~java
+   stack empty: true
+   ~~~
+
+5. Pushing element into stack
+
+   ~~~java
+   S.push(2002);
+   S.push(3003);
+   S.push(4004);
+   S.push(5005);
+   System.out.println("stack: " + S);
+   ~~~
+
+   Output:
+
+   ~~~java
+   stack: [2002, 3003, 4004, 5005]
+   ~~~
+
+6. Popping the element from stack
+
+   ~~~java
+   Integer i = S.pop();	// popping removes the element from the stack
+   System.out.println("popped value: " +i);
+   System.out.println("stack: " + S);
+   ~~~
+
+   Output:
+
+   ~~~java
+   popped value: 5005
+   stack: [2002, 3003, 4004]
+   ~~~
+
+7. Searching the element
+
+   ~~~java
+   // index started from 1 not 0
+   int Index = S.search(3003);
+   System.out.println("stack: " + S);
+   System.out.println("Index of 3003 is: "+ Index);
+   ~~~
+
+   Output:
+
+   ~~~java
+   stack: [2002, 3003, 4004]
+   Index of 3003 is: 2
+   ~~~
+
+8. Peeking the element 
+
+   ~~~java
+   Object peeked = S.peek();		// it will not remove the element like popping
+   System.out.println("stack: " + S);
+   System.out.println("Last object without removing it: " + peeked);
+   ~~~
+
+   Output:
+
+   ~~~java
+   stack: [2002, 3003, 4004]
+   Last object without removing it: 4004
+   ~~~
+
+9. Clearing the stack
+
+   ~~~java
+   S.clear();
+   System.out.println("stack: " + S);
+   ~~~
+
+   Output:
+
+   ~~~java
+   stack: []
+   ~~~
+
+10. line 10
+
     
-
-23. line 22
-
-
-
-
 
 
 

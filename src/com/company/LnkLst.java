@@ -3,6 +3,7 @@ package com.company;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Vector;
 
 public class LnkLst {
 
@@ -122,6 +123,8 @@ public class LnkLst {
         System.out.println("Poll first o/p: " + PPD.pollFirst());
         System.out.println("Poll last o/p: " + PPD.pollLast());
         System.out.println("list after Poll: "+PPD);
+
+
     }
 }
 

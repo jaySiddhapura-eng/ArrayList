@@ -2,7 +2,7 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 	arrayList v1 = new arrayList();
 	//v1.ArrayListMethod();
     //v1.ArrayListMethod1();
@@ -20,6 +20,16 @@ public class Main {
         //sampleLink.retentionExample();
         //sampleLink.subListDemo();
         //sampleLink.offerDemo();
-        sampleLink.peekFirstPollFirst();
+        //sampleLink.peekFirstPollFirst();
+
+//        syncArrayList SAL = new syncArrayList();
+//        SAL.methd();
+
+        copyonWriteArrayList COW = new copyonWriteArrayList();
+//        COW.CWAL();
+        //COW.CWALMulti();
+
+        stackDemo SD = new stackDemo();
+        SD.stackMethod();
     }
 }
