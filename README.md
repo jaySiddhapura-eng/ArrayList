@@ -12,51 +12,7 @@
 
  4. There are various methods in list interface that can be used to **insert**, **delete** and **access** the element from list
 
-    ```mermaid
-    classDiagram
-    
-    Iterable <-- Collection
-    
-    Collection <-- List
-    Collection <-- Queue
-    Collection <-- Set
-    
-    List <-- ArrayList
-    List <-- LinkedList
-    List <-- Vector
-    Vector <-- Stack
-    
-    Queue <-- Deque
-    Queue < -- PriorityQueue
-    Deque <-- LinkedList
-    Deque <-- ArrayDeque
-    
-    Set <-- SortedSet
-    Set <-- HashSet
-    Set <-- LinkedSet
-    SortedSet <-- TreeSet
-    
-    Iterable: Interface
-    Collection: Interface
-    
-    List: Interface
-    Queue: Interface
-    Set: Interface
-    
-    Deque: Interface
-    ArrayDeque: Class
-    PriorityQueue: Class
-    
-    SortedSet: Interface
-    TreeSet: Class
-    HashSet: Class
-    LinkedSet: Class
-    
-    ArrayList: Class
-    LinkedList: Class
-    Vector: Class
-    Stack: Class
-    ```
+    [Collection Interface](https://github.com/jaySiddhapura-eng/List/blob/master/Capture1.PNG)
 
 ## Who implements the List interface?
 
