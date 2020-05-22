@@ -974,7 +974,7 @@
        // image : capture
        ~~~
 
-11. line 11
+[Block Diagram for CopyOnWriteArrayList] (https://github.com/jaySiddhapura-eng/List/blob/master/Capture.PNG)
 
 ## Stack
 
