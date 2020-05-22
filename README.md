@@ -581,6 +581,8 @@
    | Can only acts as a **List**                                  | Can act as a **List and Queue**                              |
    | Better for **storing and accessing** data                    | better for **data manipulation**                             |
 
+   <br>
+
 7. **Declaring** LinkedList
 
    ~~~java
