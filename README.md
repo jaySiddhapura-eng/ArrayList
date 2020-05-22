@@ -971,10 +971,9 @@
                    System.out.println("ITR2 values: " + ITR2.next());
                }
        
-       // image : capture
        ~~~
+[Collection Interface Overview Diagram](https://github.com/jaySiddhapura-eng/List/blob/master/Capture1.PNG)
 
-[Block Diagram for CopyOnWriteArrayList] (https://github.com/jaySiddhapura-eng/List/blob/master/Capture.PNG)
 
 ## Stack
 
