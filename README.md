@@ -12,7 +12,7 @@
 
  4. There are various methods in list interface that can be used to **insert**, **delete** and **access** the element from list
 
-    ![[link](https://github.com/jaySiddhapura-eng/List/blob/master/Capture1.PNG)](https://github.com/jaySiddhapura-eng/List/blob/master/Capture1.PNG)
+![GSD1 phenotype]({{ BASE_PATH }}/Capture1.PNG)
 
 ## Who implements the List interface?
 
