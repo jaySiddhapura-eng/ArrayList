@@ -192,6 +192,8 @@
           ArrayList<Object> nameOfArrayList = new ArrayList<>();
           ~~~
 
+          
+
     3. **Add Items** in to the previously created Array List
 
           ~~~java
@@ -207,6 +209,8 @@
           ~~~java
           [string1, string2, string3, string4]
           ~~~
+
+          
 
     4. **Add items** in the array list at **specific index**
 
@@ -233,6 +237,8 @@
           	at java.base/java.util.ArrayList.add(ArrayList.java:480)
           	at com.company.arrayList.ArrayListMethod(arrayList.java:19)
           ~~~
+
+          
 
     6.	ArrayList can hold **multiple datatypes**
 
