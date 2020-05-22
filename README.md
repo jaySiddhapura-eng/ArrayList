@@ -79,15 +79,19 @@
         // class LinkedList implements the interface List
         ~~~
 
-     3. Vector
+        
 
+     3. Vector
+     
         ~~~java
         List <data-type> Lst3 = new Vector();
-        // class Vector implements the interface Vector
+   // class Vector implements the interface Vector
         ~~~
 
+        
+     
      4. Stack
-
+     
         ~~~java
         List <data-type> Lst4 = new Stack();
         // class Stack implements the interface List
@@ -126,42 +130,48 @@
             
             // add all this operations in an example of array list
             ~~~
+       
+            
 
      2. **Searching**
 
          1. This methods are used to search the index of provided element
 
          2. Following are two methods which are used to search the index of element
-
+     
             ~~~java
             int indexOf(Object element);
             //returns the index of first occurance of given element
             
             int lastIndexOf(Object element);
             // returns the index of last occurance of the given element
-            // both the methods returns -1 if element is not present in the list
+       // both the methods returns -1 if element is not present in the list
             ~~~
+       
+            
 
      3. **Iteration** 
-
-         	1.	List interface provide method to perform the iteration over the elements of the list, starting from specified index
-
+     
+        1.	List interface provide method to perform the iteration over the elements of the list, starting from specified index
+     
         ~~~java
         ListIterator listIterator(int index);
         /*
         * @param: index of the first element to be returned from the list iterator
         * @return: returns list iterator over the elements in the list(in proper seq.)
-        * starting at the specified position
+   * starting at the specified position
         * @exception: if index is out of range it will throw IndexOutOfBoundException
-        */
+   */
         ~~~
 
+        
+
      4. **Range-view**
-
+     
          1. List interface provides a method to get the list view of of the portion of the given list
-
+     
          2. User can provide range of indices
-
+     
             ~~~java
             List subList(int fromIndex, int toIndex);
             /*
@@ -178,7 +188,7 @@
 
     1. If user want to add more elements in the conventional array, new array need to be implemented
 
-    2. Create an ArrayList object 
+    2. **Create** an ArrayList object 
 
           ~~~java
           import java.util.ArrayList;
@@ -240,293 +250,317 @@
 
           
 
-    6.	ArrayList can hold **multiple datatypes**
+    5. ArrayList can hold **multiple datatypes**
 
-    ~~~java
-    Arrayist<Object> val = new ArrayList<>();
-    val.add(0,"s1");
-    val.add(1,123459);
-    val.add(2,0.01);
-    val.add(3,1);
-    System.out.println(val);
-    ~~~
+          ~~~java
+          Arrayist<Object> val = new ArrayList<>();
+          val.add(0,"s1");
+          val.add(1,123459);
+          val.add(2,0.01);
+          val.add(3,1);
+          System.out.println(val);
+          ~~~
 
-    ​	Output:
+          Output:
 
-    ~~~java
-    [s1, 123459, 0.01, 1]
-    ~~~
+          ~~~java
+          [s1, 123459, 0.01, 1]
+          ~~~
 
-    7.	**Access an Item** from ArrayList [ArrayList name **Val** is used for demo]
+          
 
-    ~~~java
-    ArrayList<Object> val1 = new ArrayList<>();
-    val1.add(0,"s1");
-    val1.add(1,123459);
-    val1.add(2,0.01);
-    val1.add(3,1);
-    
-    Object retrive = val1.get(0);
-    System.out.println(retrive);
-    ~~~
+    6. **Access an Item** from ArrayList [ArrayList name **Val** is used for demo]
 
-    ​	Output:
+          ~~~java
+          ArrayList<Object> val1 = new ArrayList<>();
+          val1.add(0,"s1");
+          val1.add(1,123459);
+          val1.add(2,0.01);
+          val1.add(3,1);
+          
+          Object retrive = val1.get(0);
+          System.out.println(retrive);
+          ~~~
 
-    ~~~java
-    s1
-    ~~~
+          Output:
 
-    ​	Exception:
+          ~~~java
+          s1
+          ~~~
 
-    ~~~java
-    System.out.println(val1.get(4)); 
-    // accessing the 4th element results into following exception
-    Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-    ~~~
+          Exception:
 
-    8.	**Setting the element** in predefined ArrayList 
+          ~~~java
+          System.out.println(val1.get(4)); 
+          // accessing the 4th element results into following exception
+          Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
+          ~~~
 
-    ~~~java
-    Arrayist<Object> val = new ArrayList<>();
-    val.add(0,"s1");
-    val.add(1,123459);
-    val.add(2,0.01);
-    val.add(3,1);
-    Object retrive = val1;
-    System.out.println(retrive);
-    
-    val1.set(1,"set example");
-    System.out.println(val1);
-    // bad index results into an exception
-    ~~~
+          
 
-    ​	Output:
+    7. **Setting the element** in predefined ArrayList 
 
-    ~~~java
-    [s1, 123459, 0.01, 1]		// before set operation
-    [s1, set example, 0.01, 1]	// after set operation
-    ~~~
+          ~~~java
+          Arrayist<Object> val = new ArrayList<>();
+          val.add(0,"s1");
+          val.add(1,123459);
+          val.add(2,0.01);
+          val.add(3,1);
+          Object retrive = val1;
+          System.out.println(retrive);
+          
+          val1.set(1,"set example");
+          System.out.println(val1);
+          // bad index results into an exception
+          ~~~
 
-    ​	Exception:
+          Output:
 
-    ~~~java
-    val1.set(4,"invalid"); // index out of bound
-    // following exception occures
-    Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-    ~~~
+          ~~~java
+          [s1, 123459, 0.01, 1]		// before set operation
+          [s1, set example, 0.01, 1]	// after set operation
+          ~~~
 
-    9.	**Removing the element** from the ArrayList
+          Exception:
 
-    ~~~java
-    ArrayList<Object> rem = new ArrayList<>();
-    rem.add(1);
-    rem.add(2);
-    rem.add(3);
-    System.out.println("Old array List: "+rem);
-    
-    rem.remove(1);
-    System.out.println("after removing an element: "+ rem);
-    ~~~
+          ~~~java
+          val1.set(4,"invalid"); // index out of bound
+          // following exception occures
+          Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
+          ~~~
 
-    ​	Output:
+          
 
-    ~~~java
-    Old array List: [1, 2, 3]
-    after removing an element: [1, 3]
-    ~~~
+    8. **Removing the element** from the ArrayList
 
-    ​	Exception: IndexOutOfBoundsException
+          ~~~java
+          ArrayList<Object> rem = new ArrayList<>();
+          rem.add(1);
+          rem.add(2);
+          rem.add(3);
+          System.out.println("Old array List: "+rem);
+          
+          rem.remove(1);
+          System.out.println("after removing an element: "+ rem);
+          ~~~
 
-    ~~~java
-    rem.remove(3); // index 4 is not available
-    
-    // results into the exception
-    Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 2
-    ~~~
+          Output:
 
-    10.	**Remove all Element** of an ArrayList
+          ~~~java
+          Old array List: [1, 2, 3]
+          after removing an element: [1, 3]
+          ~~~
 
-     ~~~java
-      ArrayList<Object> removeAll = new ArrayList<>();
-      removeAll.add(0, "el1");
-      removeAll.add(1,"el2");
-      removeAll.add(2,"el3");
-      System.out.println(removeAll);
-     
-      removeAll.clear();
-      System.out.println(removeAll);
-     ~~~
+          Exception:
 
-     	Output:
+          ~~~java
+          rem.remove(3); // index 4 is not available
+          
+          // results into the exception
+          Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 2
+          ~~~
 
-     ~~~java
-     [el1, el2, el3]
-     []
-     ~~~
+          
 
-    11.	Find out how **many elements** situated in given ArrayList [check the size of ArrayList name **removeAll** ]
+    9. **Remove all Element** of an ArrayList
 
-     ~~~java
-     Object o = removeAll.size();
-     // or
-     int o = removeAll.size();
-     System.out.println("number of elements: "+o);
-     ~~~
+          ~~~java
+          ArrayList<Object> removeAll = new ArrayList<>();
+          removeAll.add(0, "el1");
+          removeAll.add(1,"el2");
+          removeAll.add(2,"el3");
+          System.out.println(removeAll);
+           
+          removeAll.clear();
+          System.out.println(removeAll);
+          ~~~
 
-     		Output:
+          Output:
 
-     ~~~java
-     number of elements: 3
-     ~~~
+          ~~~java
+          [el1, el2, el3]
+          []
+          ~~~
 
-    12.	**Sorting** an ArrayList
+          
 
-     	1.	To sort the ArrayList the sort method of Collections class is being used
+    10. Find out how **many elements** situated in given ArrayList [check the size of ArrayList name **removeAll** ]
 
-     ~~~java
-     ArrayList<String> sortExample = new ArrayList<>();
-     sortExample.add("D");
-     sortExample.add("B");
-     sortExample.add("A");
-     sortExample.add("C");
-     sortExample.add("E");
-     
-     System.out.println("unsorted ArrayList: " + sortExample);
-     Collections.sort(sortExample);
-     System.out.println("sorted ArrayList[Acs]: "+ sortExample);
-     
-     Collections.sort(sortExample,Collections.reverseOrder());
-     System.out.println("sorted ArrayList[Desc]"+sortExample);
-     ~~~
+          ~~~java
+          Object o = removeAll.size();
+          // or
+          int o = removeAll.size();
+          System.out.println("number of elements: "+o);
+          ~~~
 
-     Output:
+          Output:
 
-     ~~~java
-     unsorted ArrayList: [D, B, A, C, E]
-     sorted ArrayList[Acs]: [A, B, C, D, E]
-     sorted ArrayList[Desc][E, D, C, B, A]
-     ~~~
+          ~~~java
+          number of elements: 3
+          ~~~
 
-    13.	**Adding** two ArrayLists
+          
 
-     	1.	Consider two ArrayList, by following procedure appending one ArrayList to the Second ArrayList is possible
+    11. **Sorting** an ArrayList
 
-     	2.	Two ArrayList must have same element datatypes [or typecasting will be requires]
-
-     	3.	**Observe the indices**
-
-         ~~~java
-         ArrayList<String> ArrayList1 = new ArrayList<String>();
-            ArrayList1.add("A");
-            ArrayList1.add("B");
-            ArrayList1.add("C");
-         ArrayList<String> ArrayList3 = new ArrayList<String>();
-            ArrayList3.add("String1");
-            ArrayList3.add("String2");
-         
-         ArrayList1.addAll(ArrayList3);
-         System.out.println("output1: " + ArrayList1);
-         
-         // put ArrayList3 from index 1 of ArrayList1
-         ArrayList1.addAll(1,ArrayList3);
-         System.out.println("output2: " + ArrayList1);
-         ~~~
-
-         Output:
-
-         ~~~
-         output1: [A, B, C, D, String1, String2]
-         output2: [A, String1, String2, B, C, D]
-         ~~~
-
-    14.	**Searching** in the ArrayList
-
-     1. This procedure search the element in the ArrayList and returns corresponding  index value
-
-     2. It **returns -1** if asked value does not found
-
-        ~~~java
-        // Type safe array list, stores only string
-        List<String> l = new ArrayList<String>(5); //list is interface, arraylist is class :)
-            l.add("s1");    //index 0
-            l.add("s2");    //index 1
-            l.add("s3");    //index 2
-            l.add("s1");    //index 3
-            l.add("s3");    //index 4
-        
-        int in1 = l.indexOf("s1");
-        int in3 = l.indexOf("s3");
-        
-        System.out.println("index of s1 first occurrence : " + in1);
-        System.out.println("index of s3 first occurrence : " + in3);
-                
-        System.out.println("index of s1 last occurrence : " + l.lastIndexOf("s1"));
-        System.out.println("index of s3 last occurrence : " + l.lastIndexOf("s3"));
-        
-        System.out.println("index of  s5 first occurrence : " + l.indexOf("s5"));
-        System.out.println("index of  s5 last occurrence : " + l.lastIndexOf("s5"));
-        ~~~
-
-        Output:
-
-        ~~~java
-        index of s1 first occurrence : 0
-        index of s3 first occurrence : 2
+           ~~~java
+           ArrayList<String> sortExample = new ArrayList<>();
+           sortExample.add("D");
+           sortExample.add("B");
+           sortExample.add("A");
+           sortExample.add("C");
+           sortExample.add("E");
             
-        index of s1 last occurrence : 3
-        index of s3 last occurrence : 4
+           System.out.println("unsorted ArrayList: " + sortExample);
+           Collections.sort(sortExample);
+           System.out.println("sorted ArrayList[Acs]: "+ sortExample);
             
-        index of s5 first occurrence : -1
-        index of s5 last occurrence : -1
-        ~~~
+           Collections.sort(sortExample,Collections.reverseOrder());
+           System.out.println("sorted ArrayList[Desc]"+sortExample);
+           ~~~
 
-    15.	**Iterate** over an ArrayList
+           Output:
 
-     1. Iterator is an interface, which allow user to traverse, access and remove the element in an ArrayList
+           ~~~java
+           unsorted ArrayList: [D, B, A, C, E]
+           sorted ArrayList[Acs]: [A, B, C, D, E]
+           sorted ArrayList[Desc][E, D, C, B, A]
+           ~~~
 
-     2. The iterator can start at the specified position in the list [user input the index value]
+           
 
-     3. If provided index is out of range then, this method throws Exception
+    12. **Adding** two ArrayLists
 
-     4. Iterator has following methods
+           1. Consider two ArrayList, by following procedure appending one ArrayList to the Second ArrayList is possible
 
-        ~~~java
-        boolean hasNext();
-        // true: iterator has more element to iterate
-        // false: no more element to iterate
-        
-        boolean hasPrevious();
-        // true: iterator has previous element
-        // false: no more previous element
-        
-        Object next();
-        //returns next element of the given Array list
-        // throws Exception[NoSuchElementException] if there is no next element
-        
-        Object previous();
-        // return previous element of the given Array list
-        // throws Exception same as Object next() method
-        
-        void remove();
-        // remove current element in the list
-        // throws exception[illegalStateException] if it is called before next
-        ~~~
+           2. Two ArrayList must have same element datatypes [or typecasting will be requires]
 
-        Sample:
+           3. **Observe the indices**
 
-        ~~~java
-        ArrayList<Integer> itSample = new ArrayList<>();
-        	itSample.add(1);
-        	itSample.add(3);
-          	itSample.add(5);
-        	itSample.add(7);
-        
-            ListIterator<Integer> iterator = itSample.listIterator();
-        
-            while(iterator.hasNext()){
-                	System.out.println(iterator.next());
-            }
-        ~~~
+                 ~~~java
+                 ArrayList<String> ArrayList1 = new ArrayList<String>();
+                    ArrayList1.add("A");
+                    ArrayList1.add("B");
+                    ArrayList1.add("C");
+                 ArrayList<String> ArrayList3 = new ArrayList<String>();
+                    ArrayList3.add("String1");
+                    ArrayList3.add("String2");
+                 
+                 ArrayList1.addAll(ArrayList3);
+                 System.out.println("output1: " + ArrayList1);
+                 
+                 // put ArrayList3 from index 1 of ArrayList1
+                 ArrayList1.addAll(1,ArrayList3);
+                 System.out.println("output2: " + ArrayList1);
+                 ~~~
+
+                 Output:
+
+                 ~~~java
+                 output1: [A, B, C, D, String1, String2]
+                 output2: [A, String1, String2, B, C, D]
+                 ~~~
+
+                 
+
+    13. **Searching** in the ArrayList
+
+           1. This procedure search the element in the ArrayList and returns corresponding  index value
+
+           2. It **returns -1** if asked value does not found
+
+                 ~~~java
+                 // Type safe array list, stores only string
+                 List<String> l = new ArrayList<String>(5); //list is interface, arraylist is class :)
+                     l.add("s1");    //index 0
+                     l.add("s2");    //index 1
+                     l.add("s3");    //index 2
+                     l.add("s1");    //index 3
+                     l.add("s3");    //index 4
+                 
+                 int in1 = l.indexOf("s1");
+                 int in3 = l.indexOf("s3");
+                 
+                 System.out.println("index of s1 first occurrence : " + in1);
+                 System.out.println("index of s3 first occurrence : " + in3);
+                         
+                 System.out.println("index of s1 last occurrence : " + l.lastIndexOf("s1"));
+                 System.out.println("index of s3 last occurrence : " + l.lastIndexOf("s3"));
+                 
+                 System.out.println("index of  s5 first occurrence : " + l.indexOf("s5"));
+                 System.out.println("index of  s5 last occurrence : " + l.lastIndexOf("s5"));
+                 ~~~
+
+                 Output:
+
+                 ~~~java
+                 index of s1 first occurrence : 0
+                 index of s3 first occurrence : 2
+                     
+                 index of s1 last occurrence : 3
+                 index of s3 last occurrence : 4
+                     
+                 index of s5 first occurrence : -1
+                 index of s5 last occurrence : -1
+                 ~~~
+
+                 
+
+    14. **Iterate** over an ArrayList
+
+           1. Iterator is an interface, which allow user to traverse, access and remove the element in an ArrayList
+
+           2. The iterator can start at the specified position in the list [user input the index value]
+
+           3. If provided index is out of range then, this method throws Exception
+
+           4. Iterator has following methods
+
+                 ~~~java
+                 boolean hasNext();
+                 // true: iterator has more element to iterate
+                 // false: no more element to iterate
+                 
+                 boolean hasPrevious();
+                 // true: iterator has previous element
+                 // false: no more previous element
+                 
+                 Object next();
+                 //returns next element of the given Array list
+                 // throws Exception[NoSuchElementException] if there is no next element
+                 
+                 Object previous();
+                 // return previous element of the given Array list
+                 // throws Exception same as Object next() method
+                 
+                 void remove();
+                 // remove current element in the list
+                 // throws exception[illegalStateException] if it is called before next
+                 ~~~
+
+                 Sample:
+
+                 ~~~java
+                 ArrayList<Integer> itSample = new ArrayList<>();
+                 	itSample.add(1);
+                 	itSample.add(3);
+                   	itSample.add(5);
+                 	itSample.add(7);
+                 
+                     ListIterator<Integer> iterator = itSample.listIterator();
+                 
+                     while(iterator.hasNext()){
+                         	System.out.println(iterator.next());
+                     }
+                 ~~~
+
+                 
+
+    15. line 15
+
+    16. line 16
+
+    ​	
 
 
 
