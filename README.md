@@ -174,7 +174,8 @@
 
  1. ArrayList class is the **Resizable Array**
 
-        1. try1
+        1. try
+        2. try1
 
  2. Size of conventional array can not be modified
 
