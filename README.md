@@ -721,7 +721,7 @@
 
     
 
-16. Check whether List is empty
+16. Check whether List is **Empty**
 
     ~~~java
     boolean EMP = LL.isEmpty();		// method from List Interface
@@ -803,7 +803,7 @@
 
     
 
-20. Sub listing certain portion of the LinkedList
+20. **Sub listing** certain portion of the LinkedList
 
     ~~~java
     LinkedList<Object> L = new LinkedList<>();
