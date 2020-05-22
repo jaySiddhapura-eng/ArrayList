@@ -807,8 +807,8 @@
 
     ~~~java
     LinkedList<Object> L = new LinkedList<>();
-    	L.add("a");        // index 0
-      	L.add("b");        // index 1
+        L.add("a");        // index 0
+        L.add("b");        // index 1
         L.add("c");        // index 2
         L.add("d");        // index 3
         L.add("e");        // index 4
