@@ -1024,7 +1024,7 @@
 
 1. Stack extends vector class
 
-2. It is LIFO list
+2. It is **LIFO** list
 
 3. **Creating** new Stack
 
@@ -1032,7 +1032,7 @@
    Stack<Integer> S = new Stack<>();
    ~~~
 
-4. Checking whether stack is empty or not
+4. **Checking** whether stack is **empty** or not
 
    ~~~java
    boolean stackStatus = S.isEmpty();
@@ -1045,7 +1045,7 @@
    stack empty: true
    ~~~
 
-5. Pushing element into stack
+5. **Pushing** element into stack
 
    ~~~java
    S.push(2002);
@@ -1061,7 +1061,7 @@
    stack: [2002, 3003, 4004, 5005]
    ~~~
 
-6. Popping the element from stack
+6. **Popping** the element from stack
 
    ~~~java
    Integer i = S.pop();	// popping removes the element from the stack
@@ -1076,7 +1076,7 @@
    stack: [2002, 3003, 4004]
    ~~~
 
-7. Searching the element
+7. **Searching** the element
 
    ~~~java
    // index started from 1 not 0
@@ -1092,7 +1092,7 @@
    Index of 3003 is: 2
    ~~~
 
-8. Peeking the element 
+8. **Peeking** the element 
 
    ~~~java
    Object peeked = S.peek();		// it will not remove the element like popping
@@ -1107,7 +1107,7 @@
    Last object without removing it: 4004
    ~~~
 
-9. Clearing the stack
+9. **Clearing** the stack
 
    ~~~java
    S.clear();
@@ -1120,9 +1120,7 @@
    stack: []
    ~~~
 
-10. line 10
-
-    
+   
 
 
 
