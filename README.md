@@ -554,27 +554,25 @@
                      }
                  ~~~
 
-                 
-
-    15. 
-
 ## LinkedList
 
 1. ArrayList and LinkedList both implements the List interface
 
-2. Both maintains the **insertion order**
+2. Therefore, **all the methods demonstrated in ArrayList section applies to LinkedList**
 
-3. Both are **non synchronized** classes
+3. Both maintains the **insertion order**
 
-4. What is **Node** in LinkedList?
+4. Both are **non synchronized** classes
 
-   1. LinkedList is a linear data structure where each element is a separate object
-   2. This element object of the List called as Node
-   3. Each node holds reference to the neighboring node along with the data
-   4. If node holds reference of next node only then list known as **Singly Linked List**
-   5. If node holds reference of both next and previous node then list known as **Doubly Linked List**
+5. What is **Node** in LinkedList?
 
-5. Differences between LinkedList and ArrayList
+   1. LinkedList is a linear data structure where each element is a separate object<br>
+   2. This element object of the List called as Node<br>
+   3. Each node holds reference to the neighboring node along with the data<br>
+   4. If node holds reference of next node only then list known as **Singly Linked List**<br>
+   5. If node holds reference of both next and previous node then list known as **Doubly Linked List**<br>
+
+6. Differences between LinkedList and ArrayList
 
    | ArrayList                                                    | LinkedList                                                   |
    | :----------------------------------------------------------- | :----------------------------------------------------------- |
@@ -583,7 +581,7 @@
    | Can only acts as a **List**                                  | Can act as a **List and Queue**                              |
    | Better for **storing and accessing** data                    | better for **data manipulation**                             |
 
-6. **Declaring** LinkedList
+7. **Declaring** LinkedList
 
    ~~~java
    LinkedList<String> LL = new LinkedList<>();
@@ -591,7 +589,9 @@
    // because both the class implements the List interface
    ~~~
 
-7. **Add Nodes** in created LinkedList
+   
+
+8. **Add Nodes** in created LinkedList
 
    ~~~java
    LL.add("A");	// method from List interface
@@ -606,7 +606,9 @@
    [A, B, C, D]
    ~~~
 
-8. Add node at **particular Index** 
+   
+
+9. Add node at **particular Index** 
 
    ~~~java
    LL.add(3,"e");  // method from List Interface
@@ -618,20 +620,22 @@
    [A, B, C, e, D]
    ~~~
 
-9. Add **First and Last Node** in the LinkedList
+10. Add **First and Last Node** in the LinkedList
 
-   ~~~java
-   LL.addFirst("F");		// methods from Deque Interface
-   LL.addLast("L");
-   ~~~
+    ~~~java
+    LL.addFirst("F");		// methods from Deque Interface
+    LL.addLast("L");
+    ~~~
 
-   Output:
+    Output:
 
-   ~~~java
-   [F, A, B, C, e, D, L]
-   ~~~
+    ~~~java
+    [F, A, B, C, e, D, L]
+    ~~~
 
-10. **Get First and Last Node** in the LinkedList
+    
+
+11. **Get First and Last Node** in the LinkedList
 
     ~~~java
     Object first = LL.getFirst();	// methods from Deque Interface
@@ -647,7 +651,9 @@
     last node: L
     ~~~
 
-11. **Remove** the Node
+    
+
+12. **Remove** the Node
 
     ~~~java
     LL.remove("C");		// method from List interface
@@ -662,7 +668,9 @@
     Remove operation: [F, A, e, D, L]
     ~~~
 
-12. **Remove first and last** node
+    
+
+13. **Remove first and last** node
 
     ~~~java
      LL.removeFirst();		// method from Deque Interface
@@ -677,7 +685,9 @@
     First and Last remove: [A, B, C, e, D]
     ~~~
 
-13. Check whether List **contains** particular node 
+    
+
+14. Check whether List **contains** particular node 
 
     ~~~java
     boolean status = LL.contains("C");		// method from List Interface
@@ -691,7 +701,9 @@
     list contains C: true
     ~~~
 
-14. Check the **Size** of List
+    
+
+15. Check the **Size** of List
 
     ~~~java
     int size = LL.size();		// method from List Interface
@@ -705,7 +717,9 @@
     size of List: 7
     ~~~
 
-15. Check whether List is empty
+    
+
+16. Check whether List is empty
 
     ~~~java
     boolean EMP = LL.isEmpty();		// method from List Interface
@@ -718,7 +732,9 @@
     Is List empty: false
     ~~~
 
-16. **Overwrite** the node in List and **Obtain** the Node of corresponding index
+    
+
+17. **Overwrite** the node in List and **Obtain** the Node of corresponding index
 
     ~~~java
     // it can overwrite the First and last node also
@@ -736,7 +752,9 @@
     The node at index 2: B
     ~~~
 
-17. **Clear** the LinkedList
+    
+
+18. **Clear** the LinkedList
 
     ~~~java
     LL.clear();		// method from List Interface
@@ -750,17 +768,129 @@
     []
     ~~~
 
-18. **Retention** of one list on the other list [Retention: the action of absorbing]
+    
+
+19. **Retention** of one list on the other list [Retention: the action of absorbing]
 
     ~~~java
+    sample1.add("s1");
+    sample1.add("s2");
+    sample1.addFirst("s0");
+    sample1.addLast("sn");
     
+    sample2.add("s2");
+    sample2.add("s3");
+    sample2.addFirst("sx");
+    sample2.addLast("sn");
+    
+    sample1.retainAll(sample2);		// method from List Interface
+    System.out.println("sample1 after retaining nodes of sample2: " + sample1);
+    // retain only nodes in sample 1 which are contained in sample 2
+    // only s0, s1 in sample 1 are erased because this two sample are not present in sample 2
+    System.out.println("sample2 is unaffected after retention: "+ sample2);
+    ~~~
+
+    Output:
+
+    ~~~java
+    Sample1: [s0, s1, s2, sn]
+    Sample2: [sx, s2, s3, sn]
+    sample1 after retaining elements of sample2: [s2, sn]
+    sample2 is unaffected after retention: [sx, s2, s3, sn]
     ~~~
 
     
 
-19. line 19
+20. Sub listing certain portion of the LinkedList
 
-20. line 20
+    ~~~java
+    LinkedList<Object> L = new LinkedList<>();
+    	L.add("a");        // index 0
+      	L.add("b");        // index 1
+        L.add("c");        // index 2
+        L.add("d");        // index 3
+        L.add("e");        // index 4
+        L.add("f");        // index 5
+    
+        // declaring empty list to save the sublist
+        List<Object> SL = new LinkedList<>();
+        SL = L.subList(1,4); 	// Exclude the element of index 4
+    	// method of List Interface
+    
+        System.out.println("List: "+L);
+        System.out.println("Newly created Sub List: "+SL);
+    ~~~
+
+    Output:
+
+    ~~~java
+    List: [a, b, c, d, e, f]
+    Sub List: [b, c, d]
+    ~~~
+
+    
+
+21. LinkedList provides **flexible addition of elements** both at front and back
+
+    ~~~java
+    LinkedList<String> list = new LinkedList<>();
+          list.add("A");
+          list.add("B");
+          list.add("C");
+    
+    System.out.println("Original list: "+ list);
+    list.offerFirst("X");		// method is from Deque Interface
+    System.out.println("after Offering X in the beginning of LinkedList: "+ list);
+    list.offerLast("O");
+    System.out.println("after Offering O in the end of LinkedList: "+ list);
+    ~~~
+
+    Output:
+
+    ~~~java
+    Original LinkedList: [A, B, C]
+    after Offering X in the beginning of LinkedList: [X, A, B, C]
+    after Offering O in the end of LinkedList: [X, A, B, C, O]
+    ~~~
+
+    
+
+22. **Peeking and Polling** of element from the list
+
+    ~~~java
+    // peeking = retrive element without removing it
+    // polling = retrive element with removal of it
+    LinkedList<String> PPD = new LinkedList<>();
+       PPD.add("A");
+       PPD.add("B");
+       PPD.add("C");
+       PPD.add("D");
+    System.out.println("OG List: "+PPD);
+    
+    System.out.println("Peek first o/p: " + PPD.peekFirst());	//method from Deque Interface
+    System.out.println("Peek last o/p: " + PPD.peekLast());
+    System.out.println("list after Peek: "+PPD);
+    
+    System.out.println("Poll first o/p: " + PPD.pollFirst());
+    System.out.println("Poll last o/p: " + PPD.pollLast());
+    System.out.println("list after Poll: "+PPD);
+    ~~~
+
+    Output:
+
+    ~~~java
+    OG List: [A, B, C, D]
+    Peek first o/p: A
+    Peek last o/p: D
+    list after Peek: [A, B, C, D]
+    Poll first o/p: A
+    Poll last o/p: D
+    list after Poll: [B, C]
+    ~~~
+
+    
+
+23. line 22
 
 
 
