@@ -174,71 +174,65 @@
 
  1. ArrayList class is the **Resizable Array**
 
-        1. try
-        2. try1
-
  2. Size of conventional array can not be modified
 
-      1. TRY
-     2. If user want to add more elements in the conventional array, new array need to be implemented
+    1. If user want to add more elements in the conventional array, new array need to be implemented
 
-     3. Create an ArrayList object 
+    2. Create an ArrayList object 
 
-    ~~~java
-    import java.util.ArrayList;
-    
-    ArrayList<String> nameOfArrayList = new ArrayList<String>();
-    // it will create the arraylist of string object
-    
-    //Alternative if user is not sure which datatype element will have
-    ArrayList<Object> nameOfArrayList = new ArrayList<Object>();
-    // or
-    ArrayList<Object> nameOfArrayList = new ArrayList<>();
-    ~~~
+          ~~~java
+          import java.util.ArrayList;
+          
+          ArrayList<String> nameOfArrayList = new ArrayList<String>();
+          // it will create the arraylist of string object
+          
+          //Alternative if user is not sure which datatype element will have
+          ArrayList<Object> nameOfArrayList = new ArrayList<Object>();
+          // or
+          ArrayList<Object> nameOfArrayList = new ArrayList<>();
+          ~~~
 
-    4.	**Add Items** in to the previously created Array List
+    3. **Add Items** in to the previously created Array List
 
-    ~~~java
-    nameOfArrayList.add("sample String1"); //index 0 Auto indexing
-    nameOfArrayList.add("sample String2"); //index 1
-    nameOfArrayList.add("sample String3"); //index 2
-    nameOfArrayList.add("sample String4"); //index 3
-    System.out.println(nameOfArrayList);
-    ~~~
+          ~~~java
+          nameOfArrayList.add("String1"); //index 0 Auto indexing
+          nameOfArrayList.add("String2"); //index 1
+          nameOfArrayList.add("String3"); //index 2
+          nameOfArrayList.add("String4"); //index 3
+          System.out.println(nameOfArrayList);
+          ~~~
 
-    Output:
+          Output:
 
-    ~~~java
-    [string1, string2, string3, string4]
-    ~~~
+          ~~~java
+          [string1, string2, string3, string4]
+          ~~~
 
-    5.	**Add items** in the array list at **specific index**
+    4. **Add items** in the array list at **specific index**
 
-    ~~~java
-    nameOfArrayList.add(0,"s1"); // add string s1 at the index 0
-    nameOfArrayList.add(1,"s2"); // add string s2 at the index 1
-    nameOfArrayList.add(2,"s3"); // add string s3 at the index 2
-    ~~~
+          ~~~java
+          nameOfArrayList.add(0,"s1"); // add string s1 at the index 0
+          nameOfArrayList.add(1,"s2"); // add string s2 at the index 1
+          nameOfArrayList.add(2,"s3"); // add string s3 at the index 2
+          ~~~
 
-    Output:
+          Output:
 
-    ~~~java
-    [s1, s2, s3]
-    ~~~
+          ~~~java
+          [s1, s2, s3]
+          ~~~
 
-    Exception:
+          Exception:
 
-    ~~~java
-    // In case of bad indexing Exception occurs : IndexOutOfBoundsException
-    val.add(4,"s4");	// bad indexing
-    ~~~
-
-    ~~~java
-    Exception in thread "main" java.lang.IndexOutOfBoundsException: Index: 4, Size: 3
-    	at java.base/java.util.ArrayList.rangeCheckForAdd(ArrayList.java:755)
-    	at java.base/java.util.ArrayList.add(ArrayList.java:480)
-    	at com.company.arrayList.ArrayListMethod(arrayList.java:19)
-    ~~~
+          ~~~java
+          // In case of bad indexing Exception occurs : IndexOutOfBoundsException
+          val.add(4,"s4");	// bad indexing
+          
+          Exception in thread "main" java.lang.IndexOutOfBoundsException: Index: 4, Size: 3
+          	at java.base/java.util.ArrayList.rangeCheckForAdd(ArrayList.java:755)
+          	at java.base/java.util.ArrayList.add(ArrayList.java:480)
+          	at com.company.arrayList.ArrayListMethod(arrayList.java:19)
+          ~~~
 
     6.	ArrayList can hold **multiple datatypes**
 
@@ -251,7 +245,7 @@
     System.out.println(val);
     ~~~
 
-    Output:
+    ​	Output:
 
     ~~~java
     [s1, 123459, 0.01, 1]
@@ -270,13 +264,13 @@
     System.out.println(retrive);
     ~~~
 
-    Output:
+    ​	Output:
 
     ~~~java
     s1
     ~~~
 
-    Exception:
+    ​	Exception:
 
     ~~~java
     System.out.println(val1.get(4)); 
@@ -300,14 +294,14 @@
     // bad index results into an exception
     ~~~
 
-    Output:
+    ​	Output:
 
     ~~~java
     [s1, 123459, 0.01, 1]		// before set operation
     [s1, set example, 0.01, 1]	// after set operation
     ~~~
 
-    Exception:
+    ​	Exception:
 
     ~~~java
     val1.set(4,"invalid"); // index out of bound
@@ -328,14 +322,14 @@
     System.out.println("after removing an element: "+ rem);
     ~~~
 
-    Output:
+    ​	Output:
 
     ~~~java
     Old array List: [1, 2, 3]
     after removing an element: [1, 3]
     ~~~
 
-    Exception: IndexOutOfBoundsException
+    ​	Exception: IndexOutOfBoundsException
 
     ~~~java
     rem.remove(3); // index 4 is not available
@@ -357,7 +351,7 @@
       System.out.println(removeAll);
      ~~~
 
-     Output:
+     	Output:
 
      ~~~java
      [el1, el2, el3]
@@ -373,7 +367,7 @@
      System.out.println("number of elements: "+o);
      ~~~
 
-     Output:
+     		Output:
 
      ~~~java
      number of elements: 3
@@ -476,8 +470,8 @@
         index of s1 last occurrence : 3
         index of s3 last occurrence : 4
             
-        index of  s5 first occurrence : -1
-        index of  s5 last occurrence : -1
+        index of s5 first occurrence : -1
+        index of s5 last occurrence : -1
         ~~~
 
     15.	**Iterate** over an ArrayList
