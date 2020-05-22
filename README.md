@@ -566,11 +566,11 @@
 
 5. What is **Node** in LinkedList?
 
-   1. LinkedList is a linear data structure where each element is a separate object<br>
-   2. This element object of the List called as Node<br>
-   3. Each node holds reference to the neighboring node along with the data<br>
-   4. If node holds reference of next node only then list known as **Singly Linked List**<br>
-   5. If node holds reference of both next and previous node then list known as **Doubly Linked List**<br>
+   1. LinkedList is a linear data structure where each element is a separate object
+   2. This element object of the List called as Node
+   3. Each node holds reference to the neighboring node along with the data
+   4. If node holds reference of next node only then list known as **Singly Linked List**
+   5. If node holds reference of both next and previous node then list known as **Doubly Linked List**<br><br>
 
 6. Differences between LinkedList and ArrayList
 
