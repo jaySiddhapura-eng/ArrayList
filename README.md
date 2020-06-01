@@ -12,7 +12,7 @@
 
  4. There are various methods in list interface that can be used to **insert**, **delete** and **access** the element from list
 
-[Collection Interface Overview Diagram](https://github.com/jaySiddhapura-eng/List/blob/master/Capture1.PNG)
+[Collection Interface Overview Diagram](assets/Capture1.PNG)
 
 ## Who implements the List interface?
 
